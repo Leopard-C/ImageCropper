@@ -8,9 +8,9 @@
 
 ```txt
 ├── base
-│   ├── imagecropperdialog.h
-│   ├── imagecropperlabel.cpp	    <======== source file
-│   └── imagecropperlabel.h       <======== header file
+│   ├── imagecropperdialog.h
+│   ├── imagecropperlabel.cpp	    <======== source file
+│   └── imagecropperlabel.h       <======== header file
 └── example
     ├── imagecropperdemo.cpp
     ├── imagecropperdemo.h
@@ -19,7 +19,7 @@
     └── mainwindow.h
 ```
 
-真正的类在`base/imagecropperlabel.h`文件中，（`base/imagecropperlabel.cpp`为类的实现文件），实际使用只需要用到这两个文件。
+类的定义在`base/imagecropperlabel.h`文件中，（`base/imagecropperlabel.cpp`为类的实现文件），实际使用只需要用到这两个文件。
 
 另外，`base/imagecropperdialog.h`文件实现了对该类的封装，只需如下一行代码即可弹出一个窗口，用户截取图像后，返回截取的图像。（见倒数第三张附图）
 
@@ -105,7 +105,7 @@ imgCropperLabel->setOutputShape(OutputShape::RECT);
 // 设置不透明度(0~1的浮点数)
 imgCropperLabel->setOpacity(0.6);  // 默认: 0.6
 // 显示四个角(四条边)上的矩形方块，用于捕获鼠标，调整裁剪器的大小（默认显示）
-//imgCropperLabel->setShowDragSquareEdge(true);
+//imgCropperLabel->setShowDragSquare(true);
 // 设置四个角(四条边)上的矩形方块的大小，颜色
 imgCropperLabel->setDragSquareEdge(8);	// 默认: 8
 imgCropperLabel->setDragSquareColor(Qt::green);  // 默认: Qt::white
@@ -121,17 +121,17 @@ QPixmap resultImage = imgCropperLabel->getCroppedImage(/*OutputShape::RECT*/);
 
 ## 四、Screenshots
 
-![important_functions](assets/README/001.png)
+![001](assets/README/001.png)
 
-![important_functions](assets/README/002.png)
+![002](assets/README/002.png)
 
-![important_functions](assets/README/003.png)
+![003](assets/README/003.png)
 
-![important_functions](assets/README/004.png)
+![004](assets/README/004.png)
 
-![important_functions](assets/README/005.png)
+![005](assets/README/005.png)
 
-![important_functions](assets/README/006.png)
+![006](assets/README/006.png)
 
 ## END
 

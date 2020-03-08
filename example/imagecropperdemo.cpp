@@ -153,7 +153,7 @@ void ImageCropperDemo::init() {
             this, &ImageCropperDemo::onEnableOpacityChanged);
 
     checkShowDragSquare->setCheckState(Qt::Checked);
-    imgCropperLabel->setShowDragSquareEdge(true);
+    imgCropperLabel->setShowDragSquare(true);
     connect(checkShowDragSquare, &QCheckBox::stateChanged,
             this, &ImageCropperDemo::onShowDragSquareChanged);
     connect(editDragSquareEdge, &QLineEdit::textChanged,
@@ -318,12 +318,12 @@ void ImageCropperDemo::onShowDragSquareChanged(int state) {
     if (state == Qt::Checked) {
         editDragSquareEdge->setEnabled(true);
         btnChooseDragSquareColor->setEnabled(true);
-        imgCropperLabel->setShowDragSquareEdge(true);
+        imgCropperLabel->setShowDragSquare(true);
     }
     else {
         editDragSquareEdge->setEnabled(false);
         btnChooseDragSquareColor->setEnabled(false);
-        imgCropperLabel->setShowDragSquareEdge(false);
+        imgCropperLabel->setShowDragSquare(false);
     }
     imgCropperLabel->update();
 }

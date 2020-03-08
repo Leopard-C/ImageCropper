@@ -81,7 +81,7 @@ public:
     /*************************************************
      * Set the size, color of drag square
     *************************************************/
-    void setShowDragSquareEdge(bool show) { isShowDragSquare = show; }
+    void setShowDragSquare(bool show) { isShowDragSquare = show; }
     void setDragSquareEdge(int edge) { dragSquareEdge = (edge >= 3 ? edge : 3); }
     void setDragSquareColor(const QColor& color) { dragSquareColor = color; }
 
